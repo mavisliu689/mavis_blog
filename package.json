@@ -18,6 +18,9 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0"
   },
+  "overrides": {
+    "picomatch": "^4.0.0"
+  },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
