@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api repos/mavisliu689/mavis_blog/actions/jobs/64481425428/logs 2>&1 | grep \"npm error\" | head -10)",
+      "Bash(gh api repos/mavisliu689/mavis_blog/actions/runs/22292183478/jobs 2>&1 | python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); steps=data['jobs'][0]['steps']; [print\\(f'{s[\\\\\"name\\\\\"]}: {s[\\\\\"conclusion\\\\\"]}'\\) for s in steps]\")",
+      "Bash(gh api repos/mavisliu689/mavis_blog/actions/runs/22292183478/jobs --jq '.jobs[0].steps[] | select\\(.name == \"Run npm ci\"\\) | .conclusion' 2>&1)",
+      "Bash(gh run view 22292183478 --repo mavisliu689/mavis_blog --log-failed 2>&1 | tail -30)",
+      "Bash(rm -rf /Users/mavis/Desktop/mavis/eslitec/mavis_blog/node_modules /Users/mavis/Desktop/mavis/eslitec/mavis_blog/package-lock.json && npm install --prefix /Users/mavis/Desktop/mavis/eslitec/mavis_blog 2>&1 | tail -3)",
+      "Bash(git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog add package-lock.json .github/workflows/deploy.yml && git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog commit -m \"$\\(cat <<'EOF'\nFix CI: use Node 22 and regenerate clean package-lock.json\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog push 2>&1)",
+      "Bash(sleep 30 && gh run list --repo mavisliu689/mavis_blog --limit 1 2>&1)",
+      "Bash(rm -rf /Users/mavis/Desktop/mavis/eslitec/mavis_blog/node_modules /Users/mavis/Desktop/mavis/eslitec/mavis_blog/package-lock.json && npm install --prefix /Users/mavis/Desktop/mavis/eslitec/mavis_blog 2>&1 | tail -5)",
+      "Bash(npm install --prefix /Users/mavis/Desktop/mavis/eslitec/mavis_blog 2>&1 | tail -5)",
+      "Bash(npm run build --prefix /Users/mavis/Desktop/mavis/eslitec/mavis_blog 2>&1 | tail -5)",
+      "Bash(git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog add package.json package-lock.json && git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog commit -m \"$\\(cat <<'EOF'\nFix CI: resolve picomatch version conflict with npm overrides\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog push 2>&1)",
+      "Bash(sleep 40 && gh run list --repo mavisliu689/mavis_blog --limit 1 2>&1)"
+    ]
+  }
+}
