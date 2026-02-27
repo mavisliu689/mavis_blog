@@ -12,7 +12,7 @@ export default function About() {
         <div className="flex flex-col sm:flex-row items-start gap-8">
           <div className="w-32 h-32 rounded-full bg-[var(--card-border)] overflow-hidden flex-shrink-0">
             <Image
-              src="/images/avatar.jpg"
+              src="/mavis_blog/images/avatar.jpg"
               alt="Mavis Liu"
               width={128}
               height={128}
