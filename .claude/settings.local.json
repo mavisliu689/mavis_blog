@@ -12,7 +12,13 @@
       "Bash(npm install --prefix /Users/mavis/Desktop/mavis/eslitec/mavis_blog 2>&1 | tail -5)",
       "Bash(npm run build --prefix /Users/mavis/Desktop/mavis/eslitec/mavis_blog 2>&1 | tail -5)",
       "Bash(git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog add package.json package-lock.json && git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog commit -m \"$\\(cat <<'EOF'\nFix CI: resolve picomatch version conflict with npm overrides\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git -C /Users/mavis/Desktop/mavis/eslitec/mavis_blog push 2>&1)",
-      "Bash(sleep 40 && gh run list --repo mavisliu689/mavis_blog --limit 1 2>&1)"
+      "Bash(sleep 40 && gh run list --repo mavisliu689/mavis_blog --limit 1 2>&1)",
+      "Bash(git commit -m \"$\\(cat <<'EOF'\n新增文章：導入 AI 之後，有些人反而變弱了\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh run list --limit 1 --json status,url,conclusion,databaseId,createdAt 2>&1)",
+      "Bash(gh run watch 22955186918 --exit-status 2>&1)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
